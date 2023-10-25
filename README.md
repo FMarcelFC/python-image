@@ -10,6 +10,6 @@ DOCKER_BUILDKIT=1 docker build -t ws-taller .
 
 ## Run your service
 ```
- docker run --name ws-taller --env-file C:/Users/GFDP/Documents/Services/ws-taller/.env --network=services_default --link msyql -p 8000:8000 ws-taller:latest
+ docker run --name ws-taller --restart unless-stopped --env-file C:/Users/GFDP/Documents/Services/ws-taller/.env --network=services_default --link msyql -p 8000:8000 ws-taller:latest
 ```
 
